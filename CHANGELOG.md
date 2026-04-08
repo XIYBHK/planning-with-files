@@ -25,9 +25,10 @@ All notable changes to this project will be documented in this file.
 
 ## [2.32.0] - 2026-04-08
 
-### Fixed
+### Added
 
-- **Codex session catchup** — `session-catchup.py` now reads Codex rollout JSONL from `~/.codex/sessions`, prefers `CODEX_THREAD_ID` when skipping the current thread, filters subagent and tiny sessions, and detects planning-file updates from structured Codex `patch_apply_end` events.
+- **Codex session catchup** (PR #124 by @ebrevdo) — `session-catchup.py` now reads Codex rollout JSONL from `~/.codex/sessions`, prefers `CODEX_THREAD_ID` when skipping the current thread, filters subagent and tiny sessions, and detects planning-file updates from structured Codex `patch_apply_end` events
+- **Loaditout security badge** (PR #126, closes #123) — Added A-grade security badge to README (top 20.5% of 20,000+ MCP servers scanned)
 
 ### Fixed
 

@@ -338,6 +338,9 @@ Formally evaluated using Anthropic's [skill-creator](https://github.com/anthropi
 planning-with-files/
 ├── commands/                # Plugin commands
 │   ├── plan.md              # /planning-with-files:plan command (v2.11.0+)
+│   ├── plan-ar.md           # Arabic /plan command (v2.33.0+)
+│   ├── plan-de.md           # German /plan command (v2.33.0+)
+│   ├── plan-es.md           # Spanish /plan command (v2.33.0+)
 │   └── start.md             # /planning-with-files:start command
 ├── templates/               # Root-level templates (for CLAUDE_PLUGIN_ROOT)
 ├── scripts/                 # Root-level scripts (for CLAUDE_PLUGIN_ROOT)
@@ -362,17 +365,31 @@ planning-with-files/
 │   ├── SKILL.md
 │   ├── templates/
 │   └── scripts/
-├── skills/                  # Legacy skill folder
-│   └── planning-with-files/
-│       ├── SKILL.md
-│       ├── examples.md
-│       ├── reference.md
-│       ├── templates/
-│       └── scripts/
-│           ├── init-session.sh
-│           ├── check-complete.sh
-│           ├── init-session.ps1   # Windows PowerShell
-│           └── check-complete.ps1 # Windows PowerShell
+├── skills/                  # Skill variants
+│   ├── planning-with-files/     # English (default)
+│   │   ├── SKILL.md
+│   │   ├── examples.md
+│   │   ├── reference.md
+│   │   ├── templates/
+│   │   └── scripts/
+│   │       ├── init-session.sh
+│   │       ├── check-complete.sh
+│   │       ├── init-session.ps1   # Windows PowerShell
+│   │       └── check-complete.ps1 # Windows PowerShell
+│   ├── planning-with-files-ar/   # Arabic (v2.33.0+)
+│   │   ├── SKILL.md
+│   │   ├── templates/
+│   │   └── scripts/
+│   ├── planning-with-files-de/   # German (v2.33.0+)
+│   │   ├── SKILL.md
+│   │   ├── templates/
+│   │   └── scripts/
+│   ├── planning-with-files-es/   # Spanish (v2.33.0+)
+│   │   ├── SKILL.md
+│   │   ├── templates/
+│   │   └── scripts/
+│   ├── planning-with-files-zh/   # Chinese Simplified (v2.25.0+)
+│   └── planning-with-files-zht/  # Chinese Traditional (v2.28.0+)
 ├── .gemini/                 # Gemini CLI skills + hooks
 │   ├── settings.json        # Hook configuration (v2.26.0)
 │   ├── hooks/               # Hook scripts (SessionStart, BeforeTool, AfterTool, BeforeModel, SessionEnd)
@@ -403,7 +420,10 @@ planning-with-files/
 │       └── scripts/         # Hook scripts (bash + PowerShell)
 ├── .mastracode/             # Mastra Code skills + hooks
 │   └── skills/
+├── .kiro/                   # Kiro Agent Skills (v2.27.0+)
+│   └── skills/
 ├── CHANGELOG.md
+├── CITATION.cff
 ├── LICENSE
 └── README.md
 ```
